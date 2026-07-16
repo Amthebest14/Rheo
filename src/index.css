@@ -1,0 +1,179 @@
+/* ── Google Fonts ────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ── Base Reset ───────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    background-color: #0A0F1C;
+    color: #F1F5F9;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0F1C;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E2D4A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1A6FFF;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(26, 111, 255, 0.35);
+    color: #F1F5F9;
+  }
+}
+
+/* ── Component Utilities ──────────────────────────────── */
+@layer components {
+
+  /* Glass card effect */
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/[0.06] rounded-2xl;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  /* Primary CTA button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           bg-[#050A14] text-cyan-electric border border-cyan-electric/40
+           transition-all duration-300 ease-out
+           hover:bg-cyan-electric/10 hover:shadow-cyan-glow hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-none;
+  }
+
+  /* Outline secondary button */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           bg-transparent text-slate-platinum border border-white/[0.12]
+           transition-all duration-300 ease-out
+           hover:border-white/25 hover:bg-white/[0.04] hover:-translate-y-0.5
+           active:translate-y-0;
+  }
+
+  /* Metric number highlight */
+  .metric-value {
+    @apply font-bold text-cyan-electric tabular-nums;
+  }
+
+  /* Section heading */
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-platinum;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-azure to-cyan-electric bg-clip-text text-transparent;
+  }
+
+  /* Subtle tag/pill */
+  .tag-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
+           bg-azure/10 text-azure border border-azure/20;
+  }
+
+  /* Bento card */
+  .bento-card {
+    @apply relative overflow-hidden rounded-2xl border border-white/[0.04]
+           bg-white/[0.02] backdrop-blur-sm
+           transition-all duration-500 ease-out;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .bento-card:hover {
+    @apply border-azure/20 bg-white/[0.04];
+  }
+}
+
+/* ── Shimmer Effect ───────────────────────────────────── */
+@layer utilities {
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #94A3B8 0%,
+      #F1F5F9 50%,
+      #94A3B8 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .cyan-glow-text {
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+  }
+
+  .azure-glow-text {
+    text-shadow: 0 0 20px rgba(26, 111, 255, 0.6);
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* ── Ticker Scroll ────────────────────────────────────── */
+.ticker-inner {
+  display: flex;
+  width: max-content;
+  animation: ticker 40s linear infinite;
+}
+
+.ticker-wrapper:hover .ticker-inner {
+  animation-play-state: paused;
+}
+
+/* ── Geometric Canvas Mesh ────────────────────────────── */
+.geo-mesh {
+  position: relative;
+  overflow: hidden;
+}
+
+.geo-mesh::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,229,255,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 80% 20%, rgba(26,111,255,0.08) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.geo-mesh::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M 80 0 L 0 0 0 80' fill='none' stroke='rgba(255,255,255,0.025)' stroke-width='1'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}

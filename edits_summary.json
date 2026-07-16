@@ -1,0 +1,812 @@
+[
+  {
+    "stepIndex": 195,
+    "startLine": 23,
+    "targetPreview": "  BarChart3,\n  Clock,\n  Zap,\n} from 'lucide-react'",
+    "replacementPreview": "  BarChart3,\n  Clock,\n  Zap,\n  Sprout,\n} from 'lucide-react'"
+  },
+  {
+    "stepIndex": 195,
+    "startLine": 35,
+    "targetPreview": "/* ═══════════════════════════════════════════════════════════\n   SUBCOMPONENT: TOKEN PAIR ICON\n════",
+    "replacementPreview": "/* ═══════════════════════════════════════════════════════════\n   SUBCOMPONENT: TOKEN PAIR ICON\n════"
+  },
+  {
+    "stepIndex": 267,
+    "startLine": 11,
+    "targetPreview": "import { useState, useEffect, useRef, useMemo } from 'react'\nimport { useNavigate } from 'react-rout",
+    "replacementPreview": "import { useNavigate } from 'react-router-dom'\nimport { toast } from 'sonner'\nimport {"
+  },
+  {
+    "stepIndex": 267,
+    "startLine": 253,
+    "targetPreview": "  const handleAction = async () => {\n    if (!hasAmount || depositStep !== 'idle') return\n    setDep",
+    "replacementPreview": "  const handleAction = async () => {\n    if (!hasAmount || depositStep !== 'idle') return\n    setDep"
+  },
+  {
+    "stepIndex": 270,
+    "startLine": 11,
+    "targetPreview": "import { useNavigate } from 'react-router-dom'\nimport { toast } from 'sonner'\nimport {",
+    "replacementPreview": "import { useState, useEffect, useRef, useMemo } from 'react'\nimport { useNavigate } from 'react-rout"
+  },
+  {
+    "stepIndex": 352,
+    "startLine": 36,
+    "targetPreview": "import { VAULTS, SLIPPAGE_OPTIONS, formatTVL, type VaultRow, type SlippageOption } from '../config/v",
+    "replacementPreview": "import { VAULTS, SLIPPAGE_OPTIONS, formatTVL, type VaultRow, type SlippageOption } from '../config/v"
+  },
+  {
+    "stepIndex": 352,
+    "startLine": 240,
+    "targetPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const [act",
+    "replacementPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de"
+  },
+  {
+    "stepIndex": 352,
+    "startLine": 264,
+    "targetPreview": "    // Fire premium sonner toast\n    toast.custom((t) => (\n      <div className=\"flex flex-col gap-2",
+    "replacementPreview": "    // Apply to portfolio context\n    if (activeTab === 'deposit') {\n      deposit(vault.id, parsedA"
+  },
+  {
+    "stepIndex": 352,
+    "startLine": 361,
+    "targetPreview": "            {/* Mock Chart Area */}\n            <div className=\"relative h-64 w-full rounded-xl over",
+    "replacementPreview": "            {/* Chart Area */}\n            <div className=\"relative h-64 w-full rounded-xl overflow-"
+  },
+  {
+    "stepIndex": 352,
+    "startLine": 497,
+    "targetPreview": "                  <span className=\"text-xs text-slate-muted\">\n                    Balance: <span cla",
+    "replacementPreview": "                  <span className=\"text-xs text-slate-muted\">\n                    Balance: <span cla"
+  },
+  {
+    "stepIndex": 355,
+    "startLine": 591,
+    "targetPreview": "function PortfolioView({ isConnected }: { isConnected: boolean }) {\n  if (!isConnected) {\n    return",
+    "replacementPreview": "function PortfolioView({ isConnected, onManageClick }: { isConnected: boolean, onManageClick: (id: s"
+  },
+  {
+    "stepIndex": 355,
+    "startLine": 645,
+    "targetPreview": "function DashHeader({\n  activeTab,\n  onTabChange,\n  walletState,\n  walletAddress,\n  onConnectWallet,",
+    "replacementPreview": "function DashHeader({\n  activeTab,\n  onTabChange,\n  walletState,\n  walletAddress,\n  onConnectWallet,"
+  },
+  {
+    "stepIndex": 355,
+    "startLine": 722,
+    "targetPreview": "          <span className=\"font-mono hidden sm:inline\">\n            {walletState === 'idle' && 'Conn",
+    "replacementPreview": "          <span className=\"font-mono hidden sm:inline\">\n            {walletState === 'idle' && 'Conn"
+  },
+  {
+    "stepIndex": 355,
+    "startLine": 846,
+    "targetPreview": "            {activeTab === 'markets' ? (\n              <div className=\"flex flex-col p-5 gap-4\">\n   ",
+    "replacementPreview": "            {activeTab === 'markets' ? (\n              <div className=\"flex flex-col p-5 gap-4\">\n   "
+  },
+  {
+    "stepIndex": 364,
+    "startLine": 863,
+    "targetPreview": "            /* ── MAIN LIST VIEW ── */\n            <>\n              {activeTab === 'markets' && (\n  ",
+    "replacementPreview": "            /* ── MAIN LIST VIEW ── */\n            <>\n              {activeTab === 'markets' ? (\n   "
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 36,
+    "targetPreview": "import { VAULTS, SLIPPAGE_OPTIONS, formatTVL, type VaultRow, type SlippageOption } from '../config/v",
+    "replacementPreview": "import { VAULTS, SLIPPAGE_OPTIONS, formatTVL, type VaultRow, type SlippageOption } from '../config/v"
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 60,
+    "targetPreview": "type TabId          = 'markets' | 'portfolio'\ntype SortConfig     = 'tvl-desc' | 'apy-desc' | 'apy-a",
+    "replacementPreview": "type TabId          = 'markets' | 'portfolio'\ntype SortConfig     = 'tvl-desc' | 'apy-desc' | 'apy-a"
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 695,
+    "targetPreview": "function DashHeader({\n  activeTab,\n  onTabChange,\n  walletState,\n  walletAddress,\n  onConnectWallet,",
+    "replacementPreview": "function DashHeader({\n  activeTab,\n  onTabChange,\n  onOpenModal,\n}: {\n  activeTab:       TabId\n  onT"
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 708,
+    "targetPreview": "  const navigate     = useNavigate()\n  const [imgError, setImgError] = useState(false)\n  const { wal",
+    "replacementPreview": "  const navigate     = useNavigate()\n  const [imgError, setImgError] = useState(false)\n  const { isC"
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 764,
+    "targetPreview": "        <button\n          onClick={onConnectWallet}\n          disabled={walletState === 'connecting'",
+    "replacementPreview": "        {isConnected && address ? (\n          <HederaProfilePill \n            address={address} \n   "
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 788,
+    "targetPreview": "export default function DashboardTerminal() {\n  const [activeTab,       setActiveTab]       = useSta",
+    "replacementPreview": "export default function DashboardTerminal() {\n  const [activeTab,       setActiveTab]       = useSta"
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 819,
+    "targetPreview": "    if (showMyPositions) {\n      result = result.filter(v => v.userBalance > 0)\n    }",
+    "replacementPreview": "    if (showMyPositions) {\n      result = result.filter(v => {\n        const pos = activePositions.f"
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 844,
+    "targetPreview": "      <DashHeader\n        activeTab={activeTab}\n        onTabChange={(t) => { setActiveTab(t); setSe",
+    "replacementPreview": "      <DashHeader\n        activeTab={activeTab}\n        onTabChange={(t) => { setActiveTab(t); setSe"
+  },
+  {
+    "stepIndex": 401,
+    "startLine": 877,
+    "targetPreview": "              ) : (\n                <div className=\"flex flex-col rounded-2xl border border-white/[0",
+    "replacementPreview": "              ) : (\n                <div className=\"flex flex-col rounded-2xl border border-white/[0"
+  },
+  {
+    "stepIndex": 451,
+    "startLine": 261,
+    "targetPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de",
+    "replacementPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de"
+  },
+  {
+    "stepIndex": 451,
+    "startLine": 273,
+    "targetPreview": "  const parsedAmount  = parseFloat(amount) || 0\n  const hasAmount     = parsedAmount > 0\n  const isM",
+    "replacementPreview": "  const parsedAmount  = parseFloat(amount) || 0\n  const hasAmount     = parsedAmount > 0\n  \n  const "
+  },
+  {
+    "stepIndex": 451,
+    "startLine": 298,
+    "targetPreview": "    // Apply to portfolio context\n    if (activeTab === 'deposit') {\n      deposit(vault.id, parsedA",
+    "replacementPreview": "    // Apply to portfolio context\n    if (activeTab === 'deposit') {\n      const amountA = parsedAmo"
+  },
+  {
+    "stepIndex": 451,
+    "startLine": 327,
+    "targetPreview": "  const handleFraction = (pct: number) => {\n    setAmount(((activeTab === 'deposit' ? walletBalance ",
+    "replacementPreview": "  const handleFraction = (pct: number) => {\n    setAmount(((activeTab === 'deposit' ? maxDepositA : "
+  },
+  {
+    "stepIndex": 451,
+    "startLine": 394,
+    "targetPreview": "                <button \n                  className={`px-4 py-1.5 rounded-md text-xs font-semibold ",
+    "replacementPreview": "                <button \n                  className={`px-4 py-1.5 rounded-md text-xs font-semibold "
+  },
+  {
+    "stepIndex": 451,
+    "startLine": 510,
+    "targetPreview": "                <div className=\"flex items-center justify-between mb-3\">\n                  <span cla",
+    "replacementPreview": "                <div className=\"flex items-center justify-between mb-3\">\n                  <span cla"
+  },
+  {
+    "stepIndex": 460,
+    "startLine": 178,
+    "targetPreview": "function VaultCard({ vault, onManageClick }: { vault: VaultRow, onManageClick: () => void }) {\n  con",
+    "replacementPreview": "function VaultCard({ vault, onManageClick }: { vault: VaultRow, onManageClick: () => void }) {\n  con"
+  },
+  {
+    "stepIndex": 460,
+    "startLine": 838,
+    "targetPreview": "    if (showMyPositions) {\n      result = result.filter(v => {\n        const pos = activePositions.f",
+    "replacementPreview": "    if (showMyPositions) {\n      result = result.filter(v => {\n        const pos = activePositions.f"
+  },
+  {
+    "stepIndex": 564,
+    "startLine": 736,
+    "targetPreview": "  const { isConnected, address, hbarBalance, disconnect } = useHederaWallet()",
+    "replacementPreview": "  const { isConnected, address, balances, disconnect } = useHederaWallet()"
+  },
+  {
+    "stepIndex": 564,
+    "startLine": 790,
+    "targetPreview": "        {isConnected && address ? (\n          <HederaProfilePill \n            address={address} \n   ",
+    "replacementPreview": "        {isConnected && address ? (\n          <HederaProfilePill \n            address={address} \n   "
+  },
+  {
+    "stepIndex": 594,
+    "startLine": 641,
+    "targetPreview": "  // Total Value Deposited\n  const totalDeposited = activePositions.reduce((acc, p) => acc + p.depos",
+    "replacementPreview": "  // Total Value Deposited (Mocking USD value for demo)\n  const totalDeposited = activePositions.red"
+  },
+  {
+    "stepIndex": 594,
+    "startLine": 671,
+    "targetPreview": "          <span className=\"text-xl font-bold tabular-nums text-slate-platinum\">\n            ${totalD",
+    "replacementPreview": "          <span className=\"text-xl font-bold tabular-nums text-slate-platinum\">\n            ${totalD"
+  },
+  {
+    "stepIndex": 644,
+    "startLine": 271,
+    "targetPreview": "  const [activeTab, setActiveTab] = useState<'deposit' | 'withdraw'>('deposit')\n  const [amount, set",
+    "replacementPreview": "  const [activeTab, setActiveTab] = useState<'deposit' | 'withdraw'>('deposit')\n  const [amountA, se"
+  },
+  {
+    "stepIndex": 644,
+    "startLine": 318,
+    "targetPreview": "    // Apply to portfolio context\n    if (activeTab === 'deposit') {\n      const amountA = parsedAmo",
+    "replacementPreview": "    // Apply to portfolio context\n    if (activeTab === 'deposit') {\n      deductBalance(vault.token"
+  },
+  {
+    "stepIndex": 644,
+    "startLine": 350,
+    "targetPreview": "    // Reset after toast\n    setAmount('0')\n    setTimeout(() => setDepositStep('idle'), 2000)\n  }\n\n",
+    "replacementPreview": "    // Reset after toast\n    setAmountA('')\n    setAmountB('')\n    setTimeout(() => setDepositStep('"
+  },
+  {
+    "stepIndex": 644,
+    "startLine": 536,
+    "targetPreview": "              {/* Asset Input Terminal */}\n              <div className=\"mb-6\">\n                <div",
+    "replacementPreview": "              {/* Asset Input Terminal */}\n              <div className=\"mb-6 space-y-3\">\n          "
+  },
+  {
+    "stepIndex": 693,
+    "startLine": 37,
+    "targetPreview": "import { usePortfolio } from '../context/PortfolioContext'\nimport VaultChart from '../components/Vau",
+    "replacementPreview": "import { usePortfolio } from '../context/PortfolioContext'\nimport { useTransactions } from '../conte"
+  },
+  {
+    "stepIndex": 693,
+    "startLine": 32,
+    "targetPreview": "  GitMerge,\n  ShieldCheck,\n  Code2\n} from 'lucide-react'",
+    "replacementPreview": "  GitMerge,\n  ShieldCheck,\n  Code2,\n  History,\n  ArrowDownRight,\n  ArrowUpRight,\n  ExternalLink\n} fr"
+  },
+  {
+    "stepIndex": 693,
+    "startLine": 263,
+    "targetPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de",
+    "replacementPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de"
+  },
+  {
+    "stepIndex": 693,
+    "startLine": 315,
+    "targetPreview": "    // Simulate transaction success\n    setDepositStep('success')\n    \n    // Apply to portfolio con",
+    "replacementPreview": "    // Simulate transaction success\n    setDepositStep('success')\n    \n    const mockHashId = `0.0.4"
+  },
+  {
+    "stepIndex": 693,
+    "startLine": 706,
+    "targetPreview": "    </div>\n  )\n}\n\n/* ═══════════════════════════════════════════════════════════\n   SUBCOMPONENT: PO",
+    "replacementPreview": "    </div>\n  )\n}\n\n/* ═══════════════════════════════════════════════════════════\n   SUBCOMPONENT: RE"
+  },
+  {
+    "stepIndex": 693,
+    "startLine": 1011,
+    "targetPreview": "              )}",
+    "replacementPreview": "              )}\n\n              <RecentActivity />"
+  },
+  {
+    "stepIndex": 726,
+    "startLine": 277,
+    "targetPreview": "  const [activeTab, setActiveTab] = useState<'deposit' | 'withdraw'>('deposit')\n  const [amountA, se",
+    "replacementPreview": "  const [activeTab, setActiveTab] = useState<'deposit' | 'withdraw'>('deposit')\n  const [depositMode"
+  },
+  {
+    "stepIndex": 726,
+    "startLine": 292,
+    "targetPreview": "  // Ratio = Token B amount per 1 Token A\n  const ratio = vault.ratio || 1.0;\n  \n  const maxUsableAF",
+    "replacementPreview": "  // Ratio = Token B amount per 1 Token A\n  const ratio = vault.ratio || 1.0;\n  \n  const maxUsableAF"
+  },
+  {
+    "stepIndex": 726,
+    "startLine": 351,
+    "targetPreview": "    // Apply to portfolio context\n    if (activeTab === 'deposit') {\n      deductBalance(vault.token",
+    "replacementPreview": "    // Apply to portfolio context\n    if (activeTab === 'deposit') {\n      if (isZapMode) {\n        "
+  },
+  {
+    "stepIndex": 726,
+    "startLine": 423,
+    "targetPreview": "  const isAInsufficient = activeTab === 'deposit' && parsedAmountA > tokenAWalletBalance;\n  const is",
+    "replacementPreview": "  const isAInsufficient = activeTab === 'deposit' && (isZapMode ? (isZapTokenA && parsedZapAmount > "
+  },
+  {
+    "stepIndex": 726,
+    "startLine": 609,
+    "targetPreview": "                {activeTab === 'withdraw' && <div className=\"absolute bottom-0 left-0 w-full h-0.5 b",
+    "replacementPreview": "                {activeTab === 'withdraw' && <div className=\"absolute bottom-0 left-0 w-full h-0.5 b"
+  },
+  {
+    "stepIndex": 726,
+    "startLine": 616,
+    "targetPreview": "              {/* Asset Input Terminal */}\n              <div className=\"mb-6 space-y-3\">\n          ",
+    "replacementPreview": "              {/* Asset Input Terminal */}\n              <div className=\"mb-6 space-y-3\">\n          "
+  },
+  {
+    "stepIndex": 726,
+    "startLine": 785,
+    "targetPreview": "                    <div className=\"flex flex-col\">\n                      <span className=\"text-slat",
+    "replacementPreview": "                    <div className=\"flex flex-col\">\n                      <span className=\"text-slat"
+  },
+  {
+    "stepIndex": 737,
+    "startLine": 670,
+    "targetPreview": "              {/* Asset Input Terminal */}\n              <div className=\"mb-6 space-y-3\">\n          ",
+    "replacementPreview": "              {/* Asset Input Terminal */}\n              <div className=\"mb-6 space-y-3\">\n          "
+  },
+  {
+    "stepIndex": 752,
+    "startLine": 790,
+    "targetPreview": "                  </>\n                )}\n              </div>\n\n                {/* Fraction Pill Row",
+    "replacementPreview": "                  </>\n                )}\n\n                {/* Fraction Pill Row */}"
+  },
+  {
+    "stepIndex": 776,
+    "startLine": 278,
+    "targetPreview": "  const [depositMode, setDepositMode] = useState<'standard' | 'zap'>('standard')\n  const [zapToken, ",
+    "replacementPreview": "  const [depositMode, setDepositMode] = useState<'standard' | 'zap'>('standard')\n  const [zapToken, "
+  },
+  {
+    "stepIndex": 776,
+    "startLine": 291,
+    "targetPreview": "  const parsedZapAmount = parseFloat(zapAmount) || 0\n  const isZapMode = activeTab === 'deposit' && ",
+    "replacementPreview": "  const parsedZapAmount = parseFloat(zapAmount) || 0\n  const isZapMode = activeTab === 'deposit' && "
+  },
+  {
+    "stepIndex": 776,
+    "startLine": 312,
+    "targetPreview": "  const maxUsableAForWallet = Math.min(tokenAWalletBalance, tokenBWalletBalance / ratio);\n  \n  const",
+    "replacementPreview": "  const maxUsableAForWallet = Math.min(tokenAWalletBalance, tokenBWalletBalance / ratio);\n  \n  // Wi"
+  },
+  {
+    "stepIndex": 776,
+    "startLine": 403,
+    "targetPreview": "    } else {\n      const percent = parsedAmountA / Math.max(userVaultBalanceTokenA, 0.000001);\n     ",
+    "replacementPreview": "    } else {\n      withdraw(vault.id, withdrawPercent)\n      \n      if (isWithdrawZapMode) {\n       "
+  },
+  {
+    "stepIndex": 776,
+    "startLine": 443,
+    "targetPreview": "    // Reset after toast\n    setAmountA('')\n    setAmountB('')\n    setTimeout(() => setDepositStep('",
+    "replacementPreview": "    // Reset after toast\n    setAmountA('')\n    setAmountB('')\n    setWithdrawPercent(0)\n    setTime"
+  },
+  {
+    "stepIndex": 776,
+    "startLine": 670,
+    "targetPreview": "              {/* Asset Input Terminal */}\n              <div className=\"mb-6 space-y-3\">\n          ",
+    "replacementPreview": "              {activeTab === 'deposit' ? (\n                /* Asset Input Terminal (Deposit) */\n    "
+  },
+  {
+    "stepIndex": 843,
+    "startLine": 65,
+    "targetPreview": "/* ═══════════════════════════════════════════════════════════\n   TYPES\n════════════════════════════",
+    "replacementPreview": "/* ═══════════════════════════════════════════════════════════\n   TYPES\n════════════════════════════"
+  },
+  {
+    "stepIndex": 843,
+    "startLine": 1241,
+    "targetPreview": "      {/* Center: Tabs */}\n      <div className=\"absolute left-1/2 -translate-x-1/2 hidden md:flex i",
+    "replacementPreview": "      {/* Center: Tabs */}\n      <div className=\"absolute left-1/2 -translate-x-1/2 hidden md:flex i"
+  },
+  {
+    "stepIndex": 843,
+    "startLine": 1258,
+    "targetPreview": "        <select \n          className=\"md:hidden bg-white/[0.02] border border-white/[0.06] text-slat",
+    "replacementPreview": "        <select \n          className=\"md:hidden bg-white/[0.02] border border-white/[0.06] text-slat"
+  },
+  {
+    "stepIndex": 843,
+    "startLine": 1289,
+    "targetPreview": "/* ═══════════════════════════════════════════════════════════\n   ROOT: DASHBOARD TERMINAL\n═════════",
+    "replacementPreview": "/* ═══════════════════════════════════════════════════════════\n   ROOT: DASHBOARD TERMINAL\n═════════"
+  },
+  {
+    "stepIndex": 843,
+    "startLine": 1351,
+    "targetPreview": "      <DashHeader\n        activeTab={activeTab}\n        onTabChange={(t) => { setActiveTab(t); setSe",
+    "replacementPreview": "      <DashHeader\n        activeTab={activeTab}\n        onTabChange={(t) => { \n          navigate(`/"
+  },
+  {
+    "stepIndex": 843,
+    "startLine": 1377,
+    "targetPreview": "              {activeTab === 'markets' ? (\n                <div className=\"flex flex-col rounded-2xl",
+    "replacementPreview": "              {activeTab === 'markets' && (\n                <div className=\"flex flex-col rounded-2x"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 41,
+    "targetPreview": "import { usePortfolio } from '../context/PortfolioContext'\nimport { useTransactions } from '../conte",
+    "replacementPreview": "import { usePortfolio } from '../context/PortfolioContext'\nimport { useTransactions } from '../conte"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 65,
+    "targetPreview": "/* ═══════════════════════════════════════════════════════════\n   TYPES\n════════════════════════════",
+    "replacementPreview": "/* ═══════════════════════════════════════════════════════════\n   TYPES\n════════════════════════════"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 268,
+    "targetPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de",
+    "replacementPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 402,
+    "targetPreview": "    if (activeTab === 'deposit') {\n      if (isZapMode) {\n        deductBalance(zapToken, parsedZapA",
+    "replacementPreview": "    if (activeTab === 'deposit') {\n      if (isZapMode) {\n        deductBalance(zapToken, parsedZapA"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 614,
+    "targetPreview": "          {/* Protocol Strategy Matrix */}\n          <div className=\"p-6 rounded-2xl border border-w",
+    "replacementPreview": "          {/* Live Strategy Routing */}\n          <div className=\"p-6 rounded-2xl border border-whit"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 1241,
+    "targetPreview": "      {/* Center: Tabs */}\n      <div className=\"absolute left-1/2 -translate-x-1/2 hidden md:flex i",
+    "replacementPreview": "      {/* Center: Tabs */}\n      <div className=\"absolute left-1/2 -translate-x-1/2 hidden md:flex i"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 1258,
+    "targetPreview": "        <select \n          className=\"md:hidden bg-white/[0.02] border border-white/[0.06] text-slat",
+    "replacementPreview": "        <select \n          className=\"md:hidden bg-white/[0.02] border border-white/[0.06] text-slat"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 1294,
+    "targetPreview": "import { useLocation } from 'react-router-dom';\nimport FaucetView from '../components/FaucetView';\ni",
+    "replacementPreview": "import { useLocation } from 'react-router-dom';\nimport FaucetView from '../components/FaucetView';\ni"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 1315,
+    "targetPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use",
+    "replacementPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use"
+  },
+  {
+    "stepIndex": 908,
+    "startLine": 1431,
+    "targetPreview": "              {activeTab === 'governance' && (\n                <GovernanceView />\n              )}\n\n",
+    "replacementPreview": "              {activeTab === 'governance' && (\n                <GovernanceView />\n              )}\n\n"
+  },
+  {
+    "stepIndex": 940,
+    "startLine": 618,
+    "targetPreview": "          {/* Live Strategy Routing */}\n          <div className=\"p-6 rounded-2xl border border-whit",
+    "replacementPreview": "          {/* Live Strategy Routing */}\n          <div className=\"p-6 rounded-2xl border border-whit"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 39,
+    "targetPreview": "} from 'lucide-react'\nimport { VAULTS, SLIPPAGE_OPTIONS, formatTVL, type VaultRow, type SlippageOpti",
+    "replacementPreview": "import { SLIPPAGE_OPTIONS, formatTVL, type VaultRow, type SlippageOption } from '../config/vaultData"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 268,
+    "targetPreview": "═══════════════════════════════════════════════════════════ */\nfunction VaultWorkspace({ vault, onCl",
+    "replacementPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow, onClose: () => void }) {\n  const { de"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 313,
+    "targetPreview": "  // Ratio = Token B amount per 1 Token A\n  const ratio = vault.ratio || 1.0;",
+    "replacementPreview": "  // Ratio = Token B amount per 1 Token A\n  // If we have live tokenPrices from Mainnet, use them. O"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1253,
+    "targetPreview": "}) {\n  const navigate     = useNavigate()\n  const [imgError, setImgError] = useState(false)",
+    "replacementPreview": "}) {\n  const navigate     = useNavigate()\n  const [imgError, setImgError] = useState(false)\n  const "
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1299,
+    "targetPreview": "      {/* Right: Wallet */}\n      <div className=\"flex items-center gap-3\">\n        <select ",
+    "replacementPreview": "      {/* Right: Wallet */}\n      <div className=\"flex items-center gap-3\">\n        {/* Live Network"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1360,
+    "targetPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use",
+    "replacementPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1370,
+    "targetPreview": "  const processedVaults = useMemo(() => {\n    let result = [...VAULTS]\n    if (searchQuery.trim() !=",
+    "replacementPreview": "  const processedVaults = useMemo(() => {\n    let result = [...vaults]\n    if (searchQuery.trim() !="
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1400,
+    "targetPreview": "  // Locate current vault object if active\n  const activeVault = VAULTS.find(v => v.id === selectedV",
+    "replacementPreview": "  // Locate current vault object if active\n  const activeVault = vaults.find(v => v.id === selectedV"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1101,
+    "targetPreview": "              const isDeposit = tx.type === 'deposit';\n              const vault = VAULTS.find(v => ",
+    "replacementPreview": "              const isDeposit = tx.type === 'deposit';\n              const vault = vaults.find(v => "
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1225,
+    "targetPreview": "          {activePositions.map(pos => {\n            const vault = VAULTS.find(v => v.id === pos.vaul",
+    "replacementPreview": "          {activePositions.map(pos => {\n            const vault = vaults.find(v => v.id === pos.vaul"
+  },
+  {
+    "stepIndex": 1058,
+    "startLine": 1490,
+    "targetPreview": "                <div className=\"flex items-center gap-4\">\n                  <span className=\"flex it",
+    "replacementPreview": "                <div className=\"flex items-center gap-4\">\n                  <span className=\"flex it"
+  },
+  {
+    "stepIndex": 1065,
+    "startLine": 1259,
+    "targetPreview": "  const [imgError, setImgError] = useState(false)\n  const { isLive } = useProtocol()\n  const { disco",
+    "replacementPreview": "  const [imgError, setImgError] = useState(false)\n  const { isLive } = useProtocol()\n  const { isCon"
+  },
+  {
+    "stepIndex": 1077,
+    "startLine": 35,
+    "targetPreview": "  ArrowDownRight,\n  ArrowUpRight,\n  ExternalLink\nimport { SLIPPAGE_OPTIONS, formatTVL, type VaultRow",
+    "replacementPreview": "  ArrowDownRight,\n  ArrowUpRight,\n  ExternalLink\n} from 'lucide-react'\nimport { SLIPPAGE_OPTIONS, fo"
+  },
+  {
+    "stepIndex": 1098,
+    "startLine": 540,
+    "targetPreview": "  return (\n    <div className=\"flex flex-col w-full animate-in fade-in slide-in-from-bottom-4 durati",
+    "replacementPreview": "  return (\n    <div className=\"flex flex-col w-full animate-in fade-in slide-in-from-bottom-4 durati"
+  },
+  {
+    "stepIndex": 1104,
+    "startLine": 530,
+    "targetPreview": "  const actionConfig = {\n    idle:    { label: idleLabel,                     disabled: idleDisabled",
+    "replacementPreview": "  const actionConfigMap = {\n    idle:    { label: idleLabel,                     disabled: idleDisab"
+  },
+  {
+    "stepIndex": 1116,
+    "startLine": 528,
+    "targetPreview": "  const actionConfigMap = {\n    idle:    { label: idleLabel,                     disabled: idleDisab",
+    "replacementPreview": "  const actionConfigMap = {\n    idle:    { label: idleLabel,                     disabled: idleDisab"
+  },
+  {
+    "stepIndex": 1122,
+    "startLine": 550,
+    "targetPreview": "      <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\">\n        \n        {/* ── COLUMN A: ANAL",
+    "replacementPreview": "      <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-6\">\n        <div className=\"lg:col-span-2 "
+  },
+  {
+    "stepIndex": 1132,
+    "startLine": 528,
+    "targetPreview": "  const actionConfigMap = {\n    idle:    { label: idleLabel,                     disabled: idleDisab",
+    "replacementPreview": "  const actionConfigMap: any = {\n    idle:    { label: idleLabel,                     disabled: idle"
+  },
+  {
+    "stepIndex": 1136,
+    "startLine": 528,
+    "targetPreview": "  const actionConfigMap = {\n    idle:    { label: idleLabel,                     disabled: idleDisab",
+    "replacementPreview": "  const actionConfigMap: any = {\n    idle:    { label: idleLabel,                     disabled: idle"
+  },
+  {
+    "stepIndex": 1142,
+    "startLine": 535,
+    "targetPreview": "  } as Record<string, { label: string, disabled: boolean }>;",
+    "replacementPreview": "  } as any;"
+  },
+  {
+    "stepIndex": 1170,
+    "startLine": 537,
+    "targetPreview": "  const fractionOptions = [0.25, 0.50, 0.75, 1.0]",
+    "replacementPreview": "  const fractionOptions = [0.25, 0.50, 0.75, 1.0];"
+  },
+  {
+    "stepIndex": 1179,
+    "startLine": 484,
+    "targetPreview": "        <div className=\"flex items-center gap-2\">\n          <span className=\"text-slate-platinum fon",
+    "replacementPreview": "        <div className=\"flex items-center gap-2\">\n          <span className=\"text-slate-platinum fon"
+  },
+  {
+    "stepIndex": 1235,
+    "startLine": 715,
+    "targetPreview": "          </div>\n\n        </div>\n\n        <div className=\"lg:col-span-1 flex flex-col gap-6 h-full\">",
+    "replacementPreview": "          </div>\n\n        <div className=\"lg:col-span-1 flex flex-col gap-6 h-full\">"
+  },
+  {
+    "stepIndex": 1289,
+    "startLine": 387,
+    "targetPreview": "                ) : (\n                  ",
+    "replacementPreview": "                )}\n                {activeTab === 'withdraw' && ("
+  },
+  {
+    "stepIndex": 1318,
+    "startLine": 311,
+    "targetPreview": "                   )} {activeTab === 'withdraw' && (\n                     <>",
+    "replacementPreview": "                  ) : (\n                    <>"
+  },
+  {
+    "stepIndex": 1346,
+    "startLine": 250,
+    "targetPreview": "\n\n                <div className=\"mb-6 space-y-3\">",
+    "replacementPreview": "\nfunction VaultWorkspace({ vault, onClose }: { vault: VaultRow; onClose: () => void }) {\n  const { w"
+  },
+  {
+    "stepIndex": 1370,
+    "startLine": 548,
+    "targetPreview": "        </div>\n\n\n",
+    "replacementPreview": "        </div>\n\n      </div>\n    </div>\n  )\n}\n\n\n"
+  },
+  {
+    "stepIndex": 1376,
+    "startLine": 713,
+    "targetPreview": "    </div>\n      </div>\n  )\n}",
+    "replacementPreview": "    </div>\n  )\n}"
+  },
+  {
+    "stepIndex": 1402,
+    "startLine": 3,
+    "targetPreview": "import { useState, useEffect, useRef, useMemo } from 'react'\nimport { useNavigate } from 'react-rout",
+    "replacementPreview": "import { useState, useEffect, useRef, useMemo } from 'react'\nimport { useNavigate, useLocation } fro"
+  },
+  {
+    "stepIndex": 1402,
+    "startLine": 841,
+    "targetPreview": "\n\nimport { useLocation } from 'react-router-dom';\nimport FaucetView from '../components/FaucetView';",
+    "replacementPreview": "\n"
+  },
+  {
+    "stepIndex": 1402,
+    "startLine": 993,
+    "targetPreview": "              \n              <div className=\"flex items-center justify-between text-[11px] text-slat",
+    "replacementPreview": "              \n              <div className=\"flex items-center justify-between text-[11px] text-slat"
+  },
+  {
+    "stepIndex": 1404,
+    "startLine": 862,
+    "targetPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use",
+    "replacementPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use"
+  },
+  {
+    "stepIndex": 1404,
+    "startLine": 871,
+    "targetPreview": "    setIsModalOpen(false)\n    awardPoints(100, \"Wallet Connected\")",
+    "replacementPreview": "    setIsModalOpen(false)\n    addPoints('connect', 100)"
+  },
+  {
+    "stepIndex": 1412,
+    "startLine": 862,
+    "targetPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use",
+    "replacementPreview": "  const { isConnected, isConnecting, connect } = useHederaWallet()\n  const { activePositions } = use"
+  },
+  {
+    "stepIndex": 1412,
+    "startLine": 871,
+    "targetPreview": "    setIsModalOpen(false)\n    addPoints('connect', 100)",
+    "replacementPreview": "    setIsModalOpen(false)\n    awardPoints(100, 'Wallet Connected')"
+  },
+  {
+    "stepIndex": 1422,
+    "startLine": 257,
+    "targetPreview": "  const { walletBalance, activePositions, deposit, withdraw } = usePortfolio()\n  const { addTransact",
+    "replacementPreview": "  const { walletBalance, activePositions, deposit, withdraw } = usePortfolio()\n  const { addTransact"
+  },
+  {
+    "stepIndex": 1422,
+    "startLine": 348,
+    "targetPreview": "      addPoints('deposit', depositAmountA * priceA + depositAmountB * priceB)",
+    "replacementPreview": "      addPoints('deposit', depositAmountA * priceA + depositAmountB * priceB)"
+  },
+  {
+    "stepIndex": 1422,
+    "startLine": 361,
+    "targetPreview": "      addPoints('deposit', depositAmountA * priceA + depositAmountB * priceB)",
+    "replacementPreview": "      awardPoints(depositAmountA * priceA + depositAmountB * priceB, 'Deposit')"
+  },
+  {
+    "stepIndex": 1422,
+    "startLine": 372,
+    "targetPreview": "      addPoints('withdraw', valueToWithdrawUsd)",
+    "replacementPreview": "      awardPoints(valueToWithdrawUsd, 'Withdraw')"
+  },
+  {
+    "stepIndex": 1422,
+    "startLine": 559,
+    "targetPreview": "function RecentActivity() {\n  const { transactions } = useTransactions()",
+    "replacementPreview": "function RecentActivity() {\n  const { transactions } = useTransactions()\n  const { vaults } = usePro"
+  },
+  {
+    "stepIndex": 1422,
+    "startLine": 627,
+    "targetPreview": "function PortfolioView({ isConnected, onManageClick }: { isConnected: boolean, onManageClick: (id: s",
+    "replacementPreview": "function PortfolioView({ isConnected, onManageClick }: { isConnected: boolean, onManageClick: (id: s"
+  },
+  {
+    "stepIndex": 1430,
+    "startLine": 364,
+    "targetPreview": "      addPoints('deposit', depositAmountA * priceA + depositAmountB * priceB)",
+    "replacementPreview": "      awardPoints(depositAmountA * priceA + depositAmountB * priceB, 'Deposit')"
+  },
+  {
+    "stepIndex": 1499,
+    "startLine": 798,
+    "targetPreview": "        <button \n          onClick={() => {\n            if (window.confirm('WARNING: This will wipe ",
+    "replacementPreview": ""
+  },
+  {
+    "stepIndex": 1595,
+    "startLine": 254,
+    "targetPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow; onClose: () => void }) {\n  const { wa",
+    "replacementPreview": "function VaultWorkspace({ vault, onClose }: { vault: VaultRow; onClose: () => void }) {\n  const { ac"
+  },
+  {
+    "stepIndex": 1595,
+    "startLine": 292,
+    "targetPreview": "  const tokenAWalletBalance = walletBalance[vault.tokenA] ?? 0\n  const tokenBWalletBalance = walletB",
+    "replacementPreview": "  const tokenAWalletBalance = balances[vault.tokenA] ?? 0\n  const tokenBWalletBalance = balances[vau"
+  },
+  {
+    "stepIndex": 1595,
+    "startLine": 631,
+    "targetPreview": "function PortfolioView({ isConnected, onManageClick }: { isConnected: boolean, onManageClick: (id: s",
+    "replacementPreview": "function PortfolioView({ isConnected, onManageClick }: { isConnected: boolean, onManageClick: (id: s"
+  },
+  {
+    "stepIndex": 1641,
+    "startLine": 32,
+    "targetPreview": "  ArrowUpRight,\n  ExternalLink\n} from 'lucide-react'",
+    "replacementPreview": "  ArrowUpRight,\n  ExternalLink,\n  Plus\n} from 'lucide-react'"
+  },
+  {
+    "stepIndex": 1641,
+    "startLine": 551,
+    "targetPreview": "          </div>\n\n        </div>\n\n      </div>\n    </div>",
+    "replacementPreview": "          </div>\n\n        </div>\n\n        {/* ── COLUMN B: ACTION DESK (Right Panel) ── */}\n        "
+  },
+  {
+    "stepIndex": 1755,
+    "startLine": 1134,
+    "targetPreview": "                  </div>\n                </div>\n              )}\n\n              {/* Action Button */",
+    "replacementPreview": "                  </div>\n                </div>\n              )}\n\n              {/* Transaction Rece"
+  },
+  {
+    "stepIndex": 1777,
+    "startLine": 492,
+    "targetPreview": "          <div className=\"p-6 rounded-2xl border border-white/[0.05] bg-[#0A0F1C]/60 flex flex-col\">",
+    "replacementPreview": "          <div className=\"p-6 rounded-2xl border border-white/[0.05] bg-[#0A0F1C]/60 flex flex-col\">"
+  },
+  {
+    "stepIndex": 1783,
+    "startLine": 41,
+    "targetPreview": "import VaultChart from '../components/VaultChart'",
+    "replacementPreview": ""
+  },
+  {
+    "stepIndex": 1806,
+    "startLine": 646,
+    "targetPreview": "                      <div className=\"flex flex-col gap-2 relative\">\n                        <div cl",
+    "replacementPreview": "                      <div className=\"flex flex-col gap-2 relative\">\n                        <div cl"
+  },
+  {
+    "stepIndex": 1806,
+    "startLine": 676,
+    "targetPreview": "                      {/* Token A Input */}\n                      <div className=\"flex flex-col gap-",
+    "replacementPreview": "                      {/* Token A Input */}\n                      <div className=\"flex flex-col gap-"
+  },
+  {
+    "stepIndex": 1813,
+    "startLine": 786,
+    "targetPreview": "                    <div className=\"grid grid-cols-4 gap-2 mt-3\">\n                      {fractionOpt",
+    "replacementPreview": "                    <div className=\"flex items-center gap-2 mt-3\">\n                      {fractionOp"
+  },
+  {
+    "stepIndex": 1859,
+    "startLine": 275,
+    "targetPreview": "  const [activeTab, setActiveTab] = useState<'deposit' | 'withdraw'>('deposit')\n  const [depositMode",
+    "replacementPreview": "  const [activeTab, setActiveTab] = useState<'deposit' | 'withdraw'>('deposit')\n  const [token, setT"
+  },
+  {
+    "stepIndex": 1862,
+    "startLine": 297,
+    "targetPreview": "  // Zap math\n  const swapAmount       = parsedZapAmount * 0.5\n  const retainedAmount   = parsedZapA",
+    "replacementPreview": "  // Zap math\n  const swapAmount       = parsedAmount * 0.5\n  const retainedAmount   = parsedAmount "
+  },
+  {
+    "stepIndex": 1865,
+    "startLine": 331,
+    "targetPreview": "  const handleAction = async () => {\n    if (!hasAmount || depositStep !== 'idle') return\n    setDep",
+    "replacementPreview": "  const handleAction = async () => {\n    if (!hasAmount || depositStep !== 'idle') return\n    setDep"
+  }
+]
