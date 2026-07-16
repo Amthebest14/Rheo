@@ -5,6 +5,12 @@ import { AlertCircle, Droplets, Loader2, Zap } from 'lucide-react';
 import { toast } from 'sonner';
 import { useWriteContract, useReadContract } from 'wagmi';
 import { FAUCET_ADDRESS } from '../config/contracts';
+import hederaLogo from '../assets/hedera-logo.png.png';
+import usdcLogo from '../assets/usdc.png';
+import sauceLogo from '../assets/saucerswap-logo.png.png';
+import daiLogo from '../assets/DAI.png';
+import hbarxLogo from '../assets/HBARX.png';
+import rheoLogo from '../assets/rheo.png';
 
 const FAUCET_ABI = [{
   name: 'claim',
@@ -340,12 +346,12 @@ export default function FaucetView() {
           {TOKENS.map(token => {
             let logoSrc = '';
             switch(token) {
-              case 'HBAR': logoSrc = '/src/assets/hedera-logo.png.png'; break;
-              case 'USDC': logoSrc = '/src/assets/usdc.png'; break;
-              case 'SAUCE': logoSrc = '/src/assets/saucerswap-logo.png.png'; break;
-              case 'DAI': logoSrc = '/src/assets/DAI.png'; break;
-              case 'HBARX': logoSrc = '/src/assets/HBARX.png'; break;
-              case 'RHEO': logoSrc = '/src/assets/rheo.png'; break;
+              case 'HBAR': logoSrc = hederaLogo; break;
+              case 'USDC': logoSrc = usdcLogo; break;
+              case 'SAUCE': logoSrc = sauceLogo; break;
+              case 'DAI': logoSrc = daiLogo; break;
+              case 'HBARX': logoSrc = hbarxLogo; break;
+              case 'RHEO': logoSrc = rheoLogo; break;
             }
             return (
               <div key={token} className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.05] flex items-center justify-between hover:border-white/[0.1] transition-all shadow-card group">

@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Github, Twitter, MessageCircle, ExternalLink, Droplets, ArrowUpRight } from 'lucide-react'
 import { BRAND, FOOTER_COLUMNS, NETWORK_STATUS } from '../config/protocolData'
+import hashpilotLogo from '../assets/HASHPILOT (1).png'
 
 /* ── Social Icon Map ── */
 const SOCIAL_LINKS = [
@@ -37,7 +38,7 @@ function BrandColumn() {
       <div className="flex items-center gap-3">
         {!imgError ? (
           <img
-            src="/src/assets/HASHPILOT (1).png"
+            src={hashpilotLogo}
             alt="Rheo Finance"
             className="h-7 w-auto object-contain"
             onError={() => setImgError(true)}

@@ -9,6 +9,7 @@ import { Menu, X, ArrowUpRight, Droplets } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { NAV_LINKS, NETWORK_STATUS, BRAND } from '../config/protocolData'
 import HederaConnectButton from './HederaConnectButton'
+import hashpilotLogo from '../assets/HASHPILOT (1).png'
 
 // ── Logo component: loads the brand logo asset.
 //    Falls back to an SVG icon mark if the file is missing.
@@ -19,7 +20,7 @@ function BrandLogo() {
     <a href="/" className="flex items-center" aria-label="Rheo Finance Home">
       {!imgError ? (
         <img
-          src="/src/assets/HASHPILOT (1).png"
+          src={hashpilotLogo}
           alt="Rheo Finance Logo"
           className="w-48 h-auto object-contain"
           onError={() => setImgError(true)}

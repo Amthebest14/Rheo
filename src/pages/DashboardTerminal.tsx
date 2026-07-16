@@ -13,6 +13,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import FaucetView from '../components/FaucetView'
 import GovernanceView from '../components/GovernanceView'
 import PointsView from '../components/PointsView'
+import hashpilotLogo from '../assets/HASHPILOT (1).png'
 import { toast } from 'sonner'
 import {
   ArrowLeft,
@@ -1219,7 +1220,7 @@ function DashHeader({
         <div className="w-px h-5 bg-white/[0.08]" />
         {!imgError ? (
           <img
-            src="/src/assets/HASHPILOT (1).png"
+            src={hashpilotLogo}
             alt="Rheo Finance"
             className="w-32 h-auto object-contain cursor-pointer"
             onClick={() => navigate('/')}
