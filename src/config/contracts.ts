@@ -15,16 +15,17 @@ export function hederaIdToEvmAddress(id: string): `0x${string}` {
   return `0x${hex}`;
 }
 
-export const ZAP_ROUTER_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_ZAP_ROUTER_ADDRESS || '0x0');
-export const FAUCET_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_FAUCET_ADDRESS || '0x0');
-export const SAUCERSWAP_ROUTER_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_SAUCERSWAP_ROUTER_ADDRESS || '0x0');
+// Live Hedera testnet deployment (DeployAll, self-consistent stack, verified end-to-end).
+export const ZAP_ROUTER_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_ZAP_ROUTER_ADDRESS || '0xAF626340612464c63b82ee1A31a1acbC5801Aa15');
+export const FAUCET_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_FAUCET_ADDRESS || '0xF39C92680C0A99C993d21c299639Cedf5916115d');
+export const SAUCERSWAP_ROUTER_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_SAUCERSWAP_ROUTER_ADDRESS || '0xe7bc372D3faf6e906B8E497f20e7625d93364080');
 
 // Tokens
-export const WHBAR_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_WHBAR_ADDRESS || '0x0');
-export const USDC_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_USDC_ADDRESS || '0x0');
-export const DAI_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_DAI_ADDRESS || '0x0');
-export const HBARX_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_HBARX_ADDRESS || '0x0');
-export const SAUCE_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_SAUCE_ADDRESS || '0x0');
+export const WHBAR_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_WHBAR_ADDRESS || '0x2b754AEd6BBb60871414aB3faCC201577BCf3120');
+export const USDC_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_USDC_ADDRESS || '0xA2Cc012e4ACb0f7383e000496Ad1d611e86Ace83');
+export const DAI_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_DAI_ADDRESS || '0x7d6A4D9E98F07B6cE11Af924ad281f7a8C6a8063');
+export const HBARX_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_HBARX_ADDRESS || '0x5CCCb7dD02DD3Ca308A39FB7B31Ab1AAa85fd2B7');
+export const SAUCE_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_SAUCE_ADDRESS || '0xa37e74DDa73c97c8998E73E08F989FeEF58160E4');
 
 // Aliases for useHederaWallet and useStaking backwards compatibility
 export const TOKEN_A_ADDRESS = WHBAR_ADDRESS;
@@ -35,12 +36,12 @@ export const RHEO_TOKEN_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_RHEO
 export const STAKING_CONTRACT_ADDRESS = hederaIdToEvmAddress(import.meta.env.VITE_STAKING_CONTRACT_ADDRESS || '0x000000000000000000000000000000000085ae7f');
 
 // Vaults
-export const VAULT_USDC_DAI = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_USDC_DAI || '0x0');
-export const VAULT_HBAR_HBARX = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_HBAR_HBARX || '0x0');
-export const VAULT_USDC_HBAR = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_USDC_HBAR || '0x0');
-export const VAULT_USDC_SAUCE = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_USDC_SAUCE || '0x0');
-export const VAULT_DAI_HBAR = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_DAI_HBAR || '0x0');
-export const VAULT_HBAR_SAUCE = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_HBAR_SAUCE || '0x0');
+export const VAULT_USDC_DAI = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_USDC_DAI || '0x9F8fc4ebd1456E2955d61a39eB6A36C911c68F55');
+export const VAULT_HBAR_HBARX = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_HBAR_HBARX || '0xA6DFC668715aAAAE4963E0834C19e25DDC57D2AF');
+export const VAULT_USDC_HBAR = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_USDC_HBAR || '0xF3e5A14d44CE91A7B742908741EB7469D60Bb554');
+export const VAULT_USDC_SAUCE = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_USDC_SAUCE || '0x063687558537ec5031677882D715D2B448580e22');
+export const VAULT_DAI_HBAR = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_DAI_HBAR || '0x5c1d6EcDfC68D3105cE280deAA14f1b017030DEc');
+export const VAULT_HBAR_SAUCE = hederaIdToEvmAddress(import.meta.env.VITE_VAULT_HBAR_SAUCE || '0xA85B5E0f6c91d9C82944448ca7F50E5Ba246862e');
 
 export const ZAP_ROUTER_ABI = (zapRouterAbi as any).abi || zapRouterAbi;
 export const VAULT_ABI = rheoVaultAbi;
