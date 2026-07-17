@@ -17,6 +17,14 @@ import {
   SAUCE_ADDRESS
 } from './contracts';
 
+// Import token icons so Vite fingerprints and emits them in production builds.
+// (Raw '/src/assets/...' string paths resolve in dev but 404 in the built site.)
+import usdcIcon from '../assets/usdc.png';
+import daiIcon from '../assets/DAI.png';
+import hbarIcon from '../assets/hedera-logo.png.png';
+import hbarxIcon from '../assets/HBARX.png';
+import sauceIcon from '../assets/saucerswap-logo.png.png';
+
 export interface VaultRow {
   id:            string
   pairLabel:     string    // e.g. "HBAR / USDC"
@@ -54,8 +62,8 @@ export const VAULTS: VaultRow[] = [
     tokenB:          'DAI',
     tokenAAddress:   USDC_ADDRESS,
     tokenBAddress:   DAI_ADDRESS,
-    tokenAIcon:      '/src/assets/usdc.png',
-    tokenBIcon:      '/src/assets/DAI.png',
+    tokenAIcon:      usdcIcon,
+    tokenBIcon:      daiIcon,
     version:         'V2',
     feeTier:         '0.05%',
     tags:            ['LARI', 'AUTO'],
@@ -76,8 +84,8 @@ export const VAULTS: VaultRow[] = [
     tokenB:          'HBARX',
     tokenAAddress:   WHBAR_ADDRESS,
     tokenBAddress:   HBARX_ADDRESS,
-    tokenAIcon:      '/src/assets/hedera-logo.png.png',
-    tokenBIcon:      '/src/assets/HBARX.png',
+    tokenAIcon:      hbarIcon,
+    tokenBIcon:      hbarxIcon,
     version:         'V1',
     feeTier:         '0.30%',
     tags:            ['leaf'],
@@ -98,8 +106,8 @@ export const VAULTS: VaultRow[] = [
     tokenB:          'HBAR',
     tokenAAddress:   USDC_ADDRESS,
     tokenBAddress:   WHBAR_ADDRESS,
-    tokenAIcon:      '/src/assets/usdc.png',
-    tokenBIcon:      '/src/assets/hedera-logo.png.png',
+    tokenAIcon:      usdcIcon,
+    tokenBIcon:      hbarIcon,
     version:         'V1',
     feeTier:         '0.30%',
     tags:            ['leaf'],
@@ -120,8 +128,8 @@ export const VAULTS: VaultRow[] = [
     tokenB:          'SAUCE',
     tokenAAddress:   USDC_ADDRESS,
     tokenBAddress:   SAUCE_ADDRESS,
-    tokenAIcon:      '/src/assets/usdc.png',
-    tokenBIcon:      '/src/assets/saucerswap-logo.png.png',
+    tokenAIcon:      usdcIcon,
+    tokenBIcon:      sauceIcon,
     version:         'V1',
     feeTier:         '0.30%',
     tags:            [],
@@ -142,8 +150,8 @@ export const VAULTS: VaultRow[] = [
     tokenB:          'HBAR',
     tokenAAddress:   DAI_ADDRESS,
     tokenBAddress:   WHBAR_ADDRESS,
-    tokenAIcon:      '/src/assets/DAI.png',
-    tokenBIcon:      '/src/assets/hedera-logo.png.png',
+    tokenAIcon:      daiIcon,
+    tokenBIcon:      hbarIcon,
     version:         'V1',
     feeTier:         '0.30%',
     tags:            [],
@@ -164,8 +172,8 @@ export const VAULTS: VaultRow[] = [
     tokenB:          'SAUCE',
     tokenAAddress:   WHBAR_ADDRESS,
     tokenBAddress:   SAUCE_ADDRESS,
-    tokenAIcon:      '/src/assets/hedera-logo.png.png',
-    tokenBIcon:      '/src/assets/saucerswap-logo.png.png',
+    tokenAIcon:      hbarIcon,
+    tokenBIcon:      sauceIcon,
     version:         'V1',
     feeTier:         '0.30%',
     tags:            ['leaf'],
