@@ -180,7 +180,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
   });
   const liveWhbarBalance = whbarBalanceRaw ? parseFloat(formatUnits(whbarBalanceRaw, 8)) : 0;
 
-  // Fetch live DAI balance (8 decimals)
+  // Fetch live DAI balance (6 decimals — matches the deployed DAI.sol)
   const { data: daiBalanceRaw } = useReadContract({
     address: DAI_ADDRESS,
     abi: ERC20_ABI,
@@ -190,7 +190,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
       enabled: !!evmAddress,
     }
   });
-  const liveDaiBalance = daiBalanceRaw ? parseFloat(formatUnits(daiBalanceRaw, 8)) : 0;
+  const liveDaiBalance = daiBalanceRaw ? parseFloat(formatUnits(daiBalanceRaw, 6)) : 0;
 
   // Fetch live HBARX balance (8 decimals)
   const { data: hbarxBalanceRaw } = useReadContract({
