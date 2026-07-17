@@ -238,7 +238,7 @@ export default function FaucetView() {
     setMintingAll(true);
 
     try {
-      if (!claimedAll && canClaimOnChain !== false) {
+      if (canClaimOnChain !== false) {
         const hash = await writeContractAsync({
           address: FAUCET_ADDRESS as `0x${string}`,
           abi: FAUCET_ABI,
