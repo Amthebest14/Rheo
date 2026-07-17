@@ -10,6 +10,11 @@
  * =========================================================
  */
 
+// Import logos so Vite emits them in production builds (raw '/src/assets/...'
+// paths resolve in dev but 404 in the built site).
+import hederaLogo from '../assets/hedera-logo.png.png';
+import saucerswapLogo from '../assets/saucerswap-logo.png.png';
+
 /* ── Navigation Links ──────────────────────────────────── */
 export interface NavLink {
   label: string;
@@ -156,14 +161,14 @@ export const ECOSYSTEM_PARTNERS: EcosystemPartner[] = [
     name:     'Hedera Hashgraph',
     tagline:  'Layer-1 Infrastructure',
     color:    '#00D1A1',
-    logoPath: '/src/assets/hedera-logo.png.png',
+    logoPath: hederaLogo,
   },
   {
     id:       'saucerswap',
     name:     'SaucerSwap',
     tagline:  'Liquidity & Emissions',
     color:    '#FF6B35',
-    logoPath: '/src/assets/saucerswap-logo.png.png',
+    logoPath: saucerswapLogo,
   },
 ];
 
