@@ -129,7 +129,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
   }, [connector]);
 
   // 1. Fetch live native HBAR balance
-  const { data: hbarBalanceData } = useBalance({ address: evmAddress });
+  const { data: hbarBalanceData } = useBalance({ address: evmAddress, query: { refetchInterval: 10_000 } });
   const liveHbarBalance = hbarBalanceData ? parseFloat(formatUnits(hbarBalanceData.value, hbarBalanceData.decimals)) : 0;
 
   // 2. Fetch live HTS USDC balance (6 decimals)
@@ -140,6 +140,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
     args: evmAddress ? [evmAddress] : undefined,
     query: {
       enabled: !!evmAddress,
+      refetchInterval: 10_000, // poll so faucet claims / deposits appear without a manual page refresh
     }
   });
   const liveUsdcBalance = usdcBalanceRaw ? parseFloat(formatUnits(usdcBalanceRaw, 6)) : 0;
@@ -152,6 +153,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
     args: evmAddress ? [evmAddress] : undefined,
     query: {
       enabled: !!evmAddress,
+      refetchInterval: 10_000, // poll so faucet claims / deposits appear without a manual page refresh
     }
   });
   const liveSauceBalance = sauceBalanceRaw ? parseFloat(formatUnits(sauceBalanceRaw, 8)) : 0;
@@ -164,6 +166,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
     args: evmAddress ? [evmAddress] : undefined,
     query: {
       enabled: !!evmAddress,
+      refetchInterval: 10_000, // poll so faucet claims / deposits appear without a manual page refresh
     }
   });
   const liveRheoBalance = rheoBalanceRaw ? parseFloat(formatUnits(rheoBalanceRaw, 8)) : 0;
@@ -176,6 +179,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
     args: evmAddress ? [evmAddress] : undefined,
     query: {
       enabled: !!evmAddress,
+      refetchInterval: 10_000, // poll so faucet claims / deposits appear without a manual page refresh
     }
   });
   const liveWhbarBalance = whbarBalanceRaw ? parseFloat(formatUnits(whbarBalanceRaw, 8)) : 0;
@@ -188,6 +192,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
     args: evmAddress ? [evmAddress] : undefined,
     query: {
       enabled: !!evmAddress,
+      refetchInterval: 10_000, // poll so faucet claims / deposits appear without a manual page refresh
     }
   });
   const liveDaiBalance = daiBalanceRaw ? parseFloat(formatUnits(daiBalanceRaw, 6)) : 0;
@@ -200,6 +205,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
     args: evmAddress ? [evmAddress] : undefined,
     query: {
       enabled: !!evmAddress,
+      refetchInterval: 10_000, // poll so faucet claims / deposits appear without a manual page refresh
     }
   });
   const liveHbarxBalance = hbarxBalanceRaw ? parseFloat(formatUnits(hbarxBalanceRaw, 8)) : 0;
@@ -212,6 +218,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
     args: evmAddress ? [evmAddress] : undefined,
     query: {
       enabled: !!evmAddress,
+      refetchInterval: 10_000, // poll so faucet claims / deposits appear without a manual page refresh
     }
   });
   const liveLpBalance = lpBalanceRaw ? parseFloat(formatUnits(lpBalanceRaw, 8)) : 0;

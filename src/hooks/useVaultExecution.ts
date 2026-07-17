@@ -41,7 +41,9 @@ export function useVaultExecution() {
         abi: ERC20_ABI,
         functionName: 'approve',
         args: [spender, amount],
-      });
+        gas: 1_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
@@ -77,7 +79,9 @@ export function useVaultExecution() {
         abi: ZAP_ROUTER_ABI as any,
         functionName: 'zapIn',
         args: [vaultAddress, tokenIn, amountIn, swapAmountOutMin, lpAmountOutMin, deadline],
-      });
+        gas: 3_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
@@ -114,7 +118,9 @@ export function useVaultExecution() {
         functionName: 'zapInHBAR',
         args: [vaultAddress, whbarAddress, swapAmountOutMin, lpAmountOutMin, deadline],
         value: amountIn * 10000000000n, // Convert tinybars (8 dec) to WEI (18 dec). Hedera EVM chain uses 18-decimal wei for native HBAR.
-      });
+        gas: 3_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
@@ -150,7 +156,9 @@ export function useVaultExecution() {
         abi: ZAP_ROUTER_ABI as any,
         functionName: 'zapOutHBAR',
         args: [vaultAddress, whbarAddress, shares, swapAmountOutMin, amountOutMin, deadline],
-      });
+        gas: 3_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
@@ -198,7 +206,9 @@ export function useVaultExecution() {
           userAddress,
           deadline
         ],
-      });
+        gas: 2_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
@@ -244,7 +254,9 @@ export function useVaultExecution() {
           userAddress,
           deadline
         ],
-      });
+        gas: 2_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
@@ -277,7 +289,9 @@ export function useVaultExecution() {
         abi: VAULT_ABI,
         functionName: 'deposit',
         args: [lpAmount, userAddress],
-      });
+        gas: 2_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
@@ -310,7 +324,9 @@ export function useVaultExecution() {
         abi: VAULT_ABI,
         functionName: 'redeem',
         args: [sharesAmount, userAddress, userAddress],
-      });
+        gas: 2_000_000n,
+        type: 'legacy',
+      } as any);
       setTxHash(hash);
       setIsPending(false);
       setIsConfirming(true);
