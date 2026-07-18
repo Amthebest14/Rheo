@@ -74,12 +74,26 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
               if (args && (args.method === 'wallet_sendTransaction' || args.method === 'eth_sendTransaction')) {
                 const request = args.params[0] || {};
                 
-                let gasPriceHex = request.gasPrice || request.maxFeePerGas;
-                if (!gasPriceHex) {
+                // Hedera enforces a LIVE minimum gas price that adjusts periodically. Submitting
+                // the raw quote with no margin gets the tx rejected as "below configured minimum"
+                // the moment the network price ticks up between the quote and submission. Add a
+                // +20% safety margin so we stay above the minimum. (Hedera charges the actual
+                // required price, so a higher submitted price is not meaningfully more expensive.)
+                let rawGasPrice = request.gasPrice || request.maxFeePerGas;
+                if (!rawGasPrice) {
                     try {
-                        gasPriceHex = await originalRequest.call(provider, { method: 'eth_gasPrice', params: [] });
+                        rawGasPrice = await originalRequest.call(provider, { method: 'eth_gasPrice', params: [] });
                     } catch (e) {
-                        console.error('Failed to estimate gasPrice', e);
+                        console.error('Failed to fetch gasPrice', e);
+                    }
+                }
+                let gasPriceHex: string | undefined;
+                if (rawGasPrice) {
+                    try {
+                        const bumped = (BigInt(rawGasPrice) * 12n) / 10n;
+                        gasPriceHex = `0x${bumped.toString(16)}`;
+                    } catch (e) {
+                        gasPriceHex = typeof rawGasPrice === 'string' ? rawGasPrice : undefined;
                     }
                 }
 
@@ -97,7 +111,7 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
                   data: request.data,
                   value: normalizeValue(request.value),
                   gas: gasHex,
-                  gasPrice: gasPriceHex ? (typeof gasPriceHex === 'string' && gasPriceHex.startsWith('0x') ? gasPriceHex : `0x${BigInt(gasPriceHex).toString(16)}`) : undefined,
+                  gasPrice: gasPriceHex,
                   // Force Legacy type — required by Hedera JSON-RPC relay
                   type: '0x0'
                 };
