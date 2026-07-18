@@ -83,15 +83,23 @@ export function HederaWalletProvider({ children }: { children: React.ReactNode }
                     }
                 }
 
+                // Hedera's relay rejects eth_sendTransaction requests with no gas field at all
+                // (it does not estimate on your behalf like most EVM relays), so this must never
+                // be left undefined even if the wallet connector didn't forward the caller's gas.
+                const DEFAULT_GAS_HEX = '0x2DC6C0'; // 3,000,000 — covers every call this app makes
+                const gasHex = request.gas
+                  ? (typeof request.gas === 'string' && request.gas.startsWith('0x') ? request.gas : `0x${BigInt(request.gas).toString(16)}`)
+                  : DEFAULT_GAS_HEX;
+
                 const ethTx = {
                   from: request.from,
                   to: request.to,
                   data: request.data,
                   value: normalizeValue(request.value),
-                  gas: request.gas ? (typeof request.gas === 'string' && request.gas.startsWith('0x') ? request.gas : `0x${BigInt(request.gas).toString(16)}`) : undefined,
+                  gas: gasHex,
                   gasPrice: gasPriceHex ? (typeof gasPriceHex === 'string' && gasPriceHex.startsWith('0x') ? gasPriceHex : `0x${BigInt(gasPriceHex).toString(16)}`) : undefined,
                   // Force Legacy type — required by Hedera JSON-RPC relay
-                  type: '0x0' 
+                  type: '0x0'
                 };
                 
                 return originalRequest.call(provider, { 
