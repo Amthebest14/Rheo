@@ -135,3 +135,18 @@ export const STAKING_CONTRACT_ABI = [
   }
 ] as const;
 
+// Real decimals of each deployed token (USDC/DAI: 6, everything else: 8).
+// Single source of truth — do not re-guess this from ad-hoc symbol comparisons.
+const TOKEN_DECIMALS: Record<string, number> = {
+  USDC: 6,
+  DAI: 6,
+  HBAR: 8,
+  WHBAR: 8,
+  HBARX: 8,
+  SAUCE: 8,
+};
+
+export function getTokenDecimals(symbol: string): number {
+  return TOKEN_DECIMALS[symbol] ?? 8;
+}
+
