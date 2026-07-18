@@ -331,8 +331,11 @@ function VaultWorkspace({ vault, onClose }: { vault: VaultRow; onClose: () => vo
   const isWithdrawZapMode = withdrawMode === 'zap'
   const isWithdrawZapTokenA = withdrawZapToken === vault.tokenA
 
-  const tokenAWalletBalance = vault.tokenA === 'HBAR' ? hbarBalance : (balances[vault.tokenA] ?? 0)
-  const tokenBWalletBalance = vault.tokenB === 'HBAR' ? hbarBalance : (balances[vault.tokenB] ?? 0)
+  // Zap mode spends native HBAR; the standard dual-token flow spends WHBAR (a
+  // separate wrapped token) instead — show whichever balance is actually being
+  // drawn from in each mode, not native HBAR unconditionally.
+  const tokenAWalletBalance = vault.tokenA === 'HBAR' ? (isZapMode ? hbarBalance : (balances['WHBAR'] ?? 0)) : (balances[vault.tokenA] ?? 0)
+  const tokenBWalletBalance = vault.tokenB === 'HBAR' ? (isZapMode ? hbarBalance : (balances['WHBAR'] ?? 0)) : (balances[vault.tokenB] ?? 0)
 
   const parsedAmountA = parseFloat(amountA) || 0
   const parsedAmountB = parseFloat(amountB) || 0
