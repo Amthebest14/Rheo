@@ -52,7 +52,7 @@ import { useAccount, useBalance, useDisconnect, usePublicClient } from 'wagmi'
 import { useAppKit } from '@reown/appkit/react'
 import { formatUnits } from 'viem'
 import { useVaultExecution } from '../hooks/useVaultExecution'
-import { ZAP_ROUTER_ADDRESS, SAUCERSWAP_ROUTER_ADDRESS, VAULT_ABI } from '../config/contracts'
+import { ZAP_ROUTER_ADDRESS, SAUCERSWAP_ROUTER_ADDRESS, VAULT_ABI, getTokenDecimals } from '../config/contracts'
 import HederaConnectButton from '../components/HederaConnectButton'
 
 const ERC20_BALANCEOF_ABI = [
@@ -395,13 +395,15 @@ function VaultWorkspace({ vault, onClose }: { vault: VaultRow; onClose: () => vo
     if (activeTab === 'deposit' && isZapMode) {
       try {
         const tokenInAddress = zapToken === vault.tokenA ? vault.tokenAAddress : vault.tokenBAddress;
-        const decimals = zapToken === 'HBAR' ? 8 : 6;
+        const decimals = getTokenDecimals(zapToken);
         const amountRaw = BigInt(Math.floor(parsedZapAmount * (10 ** decimals)));
+
+        const decimalsOut = getTokenDecimals(isZapTokenA ? vault.tokenB : vault.tokenA);
 
         let zapHash;
         if (zapToken === 'HBAR') {
           setDepositStep('signing');
-          const swapAmountOutMin = BigInt(Math.floor(swapOutputRaw * (10 ** 6) * 0.95)); // 5% slippage
+          const swapAmountOutMin = BigInt(Math.floor(swapOutputRaw * (10 ** decimalsOut) * 0.95)); // 5% slippage
           const lpAmountOutMin = 0n;
           const deadline = BigInt(Math.floor(Date.now() / 1000) + 600);
           
@@ -421,7 +423,7 @@ function VaultWorkspace({ vault, onClose }: { vault: VaultRow; onClose: () => vo
           await new Promise(r => setTimeout(r, 2000));
 
           setDepositStep('signing');
-          const swapAmountOutMin = BigInt(Math.floor(swapOutputRaw * (10 ** 8) * 0.95)); // 5% slippage
+          const swapAmountOutMin = BigInt(Math.floor(swapOutputRaw * (10 ** decimalsOut) * 0.95)); // 5% slippage
           const lpAmountOutMin = 0n;
           const deadline = BigInt(Math.floor(Date.now() / 1000) + 600);
           
@@ -467,8 +469,8 @@ function VaultWorkspace({ vault, onClose }: { vault: VaultRow; onClose: () => vo
           if (activeTab === 'deposit') {
             const amountA = parsedAmountA;
             const amountB = parsedAmountB;
-            const decimalsA = vault.tokenA === 'USDC' ? 6 : 8;
-            const decimalsB = vault.tokenB === 'USDC' ? 6 : 8;
+            const decimalsA = getTokenDecimals(vault.tokenA);
+            const decimalsB = getTokenDecimals(vault.tokenB);
             const rawA = BigInt(Math.floor(amountA * (10 ** decimalsA)));
             const rawB = BigInt(Math.floor(amountB * (10 ** decimalsB)));
 
